@@ -6,6 +6,8 @@
       code: '123456',
     };
 
+    window.opener?.postMessage(message, '*'); // отправка обратно в приложение
+
     if (window.webkit?.messageHandlers?.cordova_iab) {
       // iOS
       window.webkit.messageHandlers.cordova_iab.postMessage(message);
